@@ -1,0 +1,10 @@
+{
+	"authors": [
+		"Alexandros"
+	],
+	"copyright": "Copyright © 2022, Alexandros",
+	"description": "A minimal D application.",
+	"license": "free",
+	"name": "dbiomesdale",
+    "libs": ["curl"]
+}

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/dbiomedale
+dbiomedale.so
+dbiomedale.dylib
+dbiomedale.dll
+dbiomedale.a
+dbiomedale.lib
+dbiomedale-test-*
+*.exe
+*.o
+*.obj
+*.lst
