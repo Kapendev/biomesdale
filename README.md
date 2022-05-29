@@ -8,5 +8,6 @@ It downloads a zip file from MediaFire and extracts the content in .minecraft/mo
 - d
 - dart
 - go
+- py
 - sh
 
