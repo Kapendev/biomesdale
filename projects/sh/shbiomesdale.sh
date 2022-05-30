@@ -1,13 +1,18 @@
 #!/bin/env sh
 
-path="$HOME/.minecraft/mods"
-filepath="$path/mods.zip"
+mods_dir="$HOME/.minecraft/mods"
+temp="$mods_dir/temp.zip"
 
-[ -z "$1" ] && echo "$0 (URL Address)" && exit
-echo 'UwU > Downloading < UwU'
-rm -f "$path/"*.jar
-curl "$(curl $1 | grep -o 'https://download.*.zip')" > "$filepath"
-echo 'UwU > Extracting < UwU'
-unzip -d "$path" "$filepath"
-rm "$filepath"
-echo 'UwU > Done < UwU'
+main() {
+    url="$1"
+    [ -z "$url" ] && echo "shbiomesdale [URL Address]" && exit
+    for mod in $mods_dir/* ; do rm -rf $mod ; done
+    echo '-.- > Downloading...'
+    curl -# "$(curl -s $url | grep -o https://download.*.zip)" > "$temp"
+    echo 'UwU > Extracting...'
+    unzip -q "$temp" -d "$mods_dir"
+    rm "$temp"
+    echo 'OwO > Done!'
+}
+
+main "$1"
